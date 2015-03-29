@@ -9,8 +9,8 @@ This repository contains experimental **Dockerfile** of [Java](https://www.java.
 ### Tags
 
 * `latest` (default): OpenJDK Java 7 JRE which is an alias to `openjdk-7-jre`
-* `openjdk-7-jdk`: OpenJDK Java 7 JDK
-* `openjdk-7-jre`: OpenJDK Java 7 JRE
+* `openjdk7-jdk`: OpenJDK Java 7 JDK
+* `openjdk7-jre`: OpenJDK Java 7 JRE
 
 ### Installation
 
