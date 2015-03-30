@@ -1,6 +1,6 @@
 ## Java
 
-This repository contains experimental **Dockerfile** of [Java](https://www.java.com/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/denvazh/java/) based on lightweight [Alpine Linux docker image provided by gliderlabs](https://registry.hub.docker.com/u/gliderlabs/alpine/)
+This repository contains experimental **Dockerfile** of [Java](https://www.java.com/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/denvazh/java/) based on lightweight [Alpine Linux docker image provided by gliderlabs](https://registry.hub.docker.com/u/gliderlabs/alpine/). This image also includes mozilla trusted ca certificates imported to `cacerts` trusted keystore.
 
 ### Base Docker Image
 
