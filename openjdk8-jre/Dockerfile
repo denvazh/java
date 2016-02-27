@@ -1,14 +1,14 @@
-# Debian 8.1 with OpenJDK Java Runtime Environment 8
+# Alpine Linux with OpenJDK Java Runtime Environment 8
 
-FROM debian:8.1
+FROM gliderlabs/alpine:3.3
 
 MAINTAINER Denis Vazhenin <denis.vazhenin@me.com>
 
-ENV BACKPORTS "deb http://httpredir.debian.org/debian jessie-backports main contrib non-free"
-
-RUN echo "$BACKPORTS" > /etc/apt/sources.list.d/jessie-backports.list && \
-    apt-get update && \
-    apt-get -t jessie-backports install openjdk-8-jre -y
+RUN apk-install bash openjdk8-jre-base ca-certificates && \
+  find /usr/share/ca-certificates/mozilla/ -name *.crt -exec keytool -import -trustcacerts \
+  -keystore /usr/lib/jvm/java-1.8-openjdk/jre/lib/security/cacerts -storepass changeit -noprompt \
+  -file {} -alias {} \; && \
+  keytool -list -keystore /usr/lib/jvm/java-1.8-openjdk/jre/lib/security/cacerts --storepass changeit
 
 # Expose reference to JAVA_HOME
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/jre
+ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk

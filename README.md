@@ -2,19 +2,18 @@
 
 This repository contains experimental **Dockerfile** of [Java](https://www.java.com/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/denvazh/java/) based on lightweight [Alpine Linux docker image provided by gliderlabs](https://registry.hub.docker.com/u/gliderlabs/alpine/). This image also includes mozilla trusted ca certificates imported to `cacerts` trusted keystore.
 
-Since, OpenJDK 7 is the only available version in Alpine Linux, thus temporarily OpenJDK 8 is build using Debian 8.1.
-
 ### Base Docker Image
 
-* [gliderlabs/alpine:3.1](https://registry.hub.docker.com/u/gliderlabs/alpine/)
+* [gliderlabs/alpine:3.2](https://registry.hub.docker.com/u/gliderlabs/alpine/) for `openjdk7` images
+* [gliderlabs/alpine:3.3](https://registry.hub.docker.com/u/gliderlabs/alpine/) for `openjdk8` images
 
 ### Tags
 
-* `latest` (default): OpenJDK Java 7 JRE which is an alias to `openjdk-7-jre`
+* `latest` (default): OpenJDK Java 8 JRE which is an alias to `openjdk-8-jre`
 * `openjdk7-jdk`: OpenJDK Java 7 JDK
 * `openjdk7-jre`: OpenJDK Java 7 JRE
-* `openjdk8-jdk`: OpenJDK Java 8 JDK (debian 8.1)
-* `openjdk8-jre`: OpenJDK Java 8 JRE (debian 8.1)
+* `openjdk8-jdk`: OpenJDK Java 8 JDK
+* `openjdk8-jre`: OpenJDK Java 8 JRE
 
 ### Installation
 

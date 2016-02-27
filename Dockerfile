@@ -1,1 +1,1 @@
-openjdk7-jre/Dockerfile
+openjdk8-jre/Dockerfile
