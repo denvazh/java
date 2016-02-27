@@ -1,6 +1,6 @@
 # Alpine Linux with OpenJDK Java Runtime and Development Environment 7
 
-FROM gliderlabs/alpine:3.1
+FROM gliderlabs/alpine:3.2
 
 MAINTAINER Denis Vazhenin <denis.vazhenin@me.com>
 
